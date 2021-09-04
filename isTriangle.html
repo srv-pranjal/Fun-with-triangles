@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fun With Triangles | Is Triangle?</title>
+    <title>Fun With Triangles | Is Triangle</title>
   </head>
   <body>
-    <h1>
-      Enter the angles and find out whether they can together make a triangle or
-      not
-    </h1>
-    <form action="">
-      <input type="text" class="angles" />
-      <input type="text" class="angles" />
-      <input type="text" class="angles" />
-      <button type="submit">Check Now</button>
-    </form>
-    <div id="output">Output will be shown here</div>
+    <div class="container">
+      <h1>
+        Enter the angles and find out whether they can together make a triangle
+        or not
+      </h1>
+      <form id="form">
+        <input type="number" required class="input-angles" />
+        <input type="number" required class="input-angles" />
+        <input type="number" required class="input-angles" />
+        <button>Check Now</button>
+      </form>
+      <div id="output">Output will be shown here</div>
+    </div>
+    <script src="./isTriangle.js"></script>
   </body>
 </html>

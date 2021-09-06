@@ -54,24 +54,24 @@ function formSubmitHandler(e, index) {
   let area = 0;
   if (index === 0) {
     message.innerText =
-      "Area is calculated using the formula [area = 1/2(base * height)]";
+      "Area is calculated using the formula:-\n[area = 1/2(base * height)]";
     area = calAreaForRightAngled();
   } else if (index === 1) {
     area = calAreaForScalene();
     message.innerText =
-      "Area is calculated using the formula [area = √s(s-a)(s-b)(s-c)]";
+      "Area is calculated using the formula:-\n[area = √s(s-a)(s-b)(s-c)]";
     if (!area || area === 0) {
       message.innerText =
         "Enter valid side lengths such that each side length should be less than sum of other two sides";
     }
   } else {
     message.innerHTML =
-      "Area is calculated using the formula [area = side<sup>2</sup>√3/4]";
+      "Area is calculated using the formula:-<br>[area = side<sup>2</sup>√3/4]";
     area = calAreaForEquilateral();
   }
   if (area && area !== 0) {
     if (!Number.isInteger(area)) area = area.toFixed(4);
-    outputMessage.innerText = area;
+    outputMessage.innerText = `Area = ${area}`;
   }
 }
 

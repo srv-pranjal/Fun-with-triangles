@@ -11,7 +11,31 @@ body {
   background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
   font-family: "Libre Baskerville", serif;
 }
-a {
+.container {
+  max-width: 500px;
+  background-color: #aecad6;
+  background-image: linear-gradient(315deg, #aecad6 0%, #b8d3fe 74%);
+  padding: 1rem;
+  width: 85%;
+  margin: 1.5rem auto;
+  text-align: center;
+  border: 2px solid rgba(53, 52, 52, 0.308);
+  border: 2px solid;
+}
+hr {
+  width: 90%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+#routers {
+  margin: auto;
+  width: 99%;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0;
+}
+a,
+.triangle-type {
   text-decoration: none;
   margin: 1rem;
   background-color: aliceblue;
@@ -26,32 +50,114 @@ a {
   font-family: "Jost", sans-serif;
   font-weight: bold;
   transition: 0.5s;
+  cursor: pointer;
 }
-a:hover {
+a:hover,
+.triangle-type:hover {
   color: #fff;
   background-color: rgb(151, 2, 250);
 }
-hr {
-  width: 90%;
-  margin: auto;
+.triangle-type {
+  max-width: 80%;
+  margin: 1rem auto;
 }
-.container {
-  max-width: 500px;
-  background-color: #aecad6;
-  background-image: linear-gradient(315deg, #aecad6 0%, #b8d3fe 74%);
-  padding: 1rem 0;
-  width: 90%;
-  margin: auto;
-  text-align: center;
-  position: relative;
-  top: 23vh;
-  border: 2px solid rgba(53, 52, 52, 0.308);
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-angles,
+.input-sides,
+.input-number {
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+  padding: 1rem;
+  max-width: 50px;
+  background-color: #fef3c7;
   border: 2px solid;
 }
 
-#routers {
-  margin: auto;
-  width: 95%;
-  display: grid;
-  grid-template-columns: auto auto;
+button {
+  display: block;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Jost", sans-serif;
+  font-weight: 900;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  transition: all 0.5s;
+  background-image: linear-gradient(
+    to right,
+    #c9ffbf 0%,
+    #ffafbd 51%,
+    #c9ffbf 100%
+  );
+  margin: 1rem auto;
+}
+
+button:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+p {
+  line-height: 150%;
+}
+
+#triangle-shape {
+  width: 0;
+  height: 0;
+  border: 50px groove;
+  border-color: transparent transparent red red;
+  margin: 2rem auto;
+  position: relative;
+}
+#triangle-shape::before {
+  content: "a";
+  position: absolute;
+  left: -5rem;
+}
+#triangle-shape::after {
+  content: "b ";
+  position: absolute;
+  bottom: -5rem;
+  left: -0.5rem;
+}
+#output {
+  margin: 1rem auto;
+  padding: 1rem 0;
+  max-width: 220px;
+  background-color: #3e4cca;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  color: #fff;
+  min-height: 20px;
+  text-align: center;
+}
+.triangle-box {
+  margin-top: 2rem;
+}
+
+.quiz-box {
+  background-color: #fffbeb;
+  /* background-color: #a4ff7a;
+  background-color: #ff7a7a; */
+  margin: 1rem 0;
+  border-radius: 20px;
+  border: 2px solid;
+  padding: 1rem 1rem;
+  text-align: left;
+}
+.quiz-box p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+span {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
 }

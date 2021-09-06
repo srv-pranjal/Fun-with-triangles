@@ -1,6 +1,7 @@
 const inputButtons = document.querySelectorAll("input");
 const formID = document.querySelector("form");
 const outputMessage = document.querySelector("#output");
+const quizBoxes = document.querySelectorAll(".quiz-box");
 const correctAnswers = ["option1", "option3", "option1", "option2", "option3"];
 
 function getMarks() {
@@ -10,7 +11,11 @@ function getMarks() {
     if (inputButton.checked) markedAnswers.push(inputButton.value);
   });
   for (let index = 0; index < correctAnswers.length; index++) {
-    if (markedAnswers[index] === correctAnswers[index]) marks += 1;
+    if (markedAnswers[index] === correctAnswers[index]) {
+      marks += 1;
+      console.log(quizBoxes[index]);
+      quizBoxes[index].style.backgroundColor = "#a4ff7a";
+    } else quizBoxes[index].style.backgroundColor = "#ff7a7a";
   }
   return marks;
 }

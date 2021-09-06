@@ -1,5 +1,5 @@
 const inputAngles = document.querySelectorAll(".input-angles");
-const outputMessage = document.querySelector("#output");
+const outputMessage = document.querySelector("#output-message");
 const formID = document.querySelector("#form");
 
 function checkIfAnglesFormTriangle() {
@@ -16,7 +16,7 @@ function formSubmitHandler(e) {
   const isTriangle = checkIfAnglesFormTriangle();
   if (isTriangle) {
     outputMessage.innerText =
-      "Wohoooo!! These angles together do make a triangle";
+      "Wohoooo!! These angles together do make a triangle🥳🥳";
   } else {
     outputMessage.innerText =
       "Oh no!! These angles together cannot make a triangle. Why?\nHint: Sum of angles = 180";

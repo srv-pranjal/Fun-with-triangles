@@ -14,12 +14,13 @@ function calculateHypotenuse() {
 function formSubmitHandler(e) {
   e.preventDefault();
   message.innerHTML =
-    "Hypotenuse is calculated using the formula [hypotenuse = √(base<sup>2</sup> + height<sup>2</sup>)]";
+    "Hypotenuse is calculated using the formula:-<br>[hypotenuse = √(a<sup>2</sup> + b<sup>2</sup>)]";
   let hypotenuse = calculateHypotenuse();
   if (!Number.isInteger(hypotenuse)) {
     hypotenuse = hypotenuse.toFixed(4);
   }
-  outputMessage.innerText = hypotenuse;
+  outputMessage.style.display = "block";
+  outputMessage.innerText = `Hypotenuse = ${hypotenuse}`;
 }
 
 formID.addEventListener("submit", formSubmitHandler);

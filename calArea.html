@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fun with Triangles | Calculate Area</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Select what type of triangle you have</h1>
+      <h3>Select what type of triangle you have</h3>
+      <hr />
       <div class="triangle-type">
         Right angled triangle with given base and height
       </div>
       <div class="triangle-type">
-        Scalene triangle with given three distinct sides
+        Scalene triangle with given three sides
       </div>
       <div class="triangle-type">Equilateral triangle with given side</div>
       <div style="display: none" class="triangle-box" id="right-angled">
         <h3>Enter base and height</h3>
         <form>
           <label>base</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <label>height</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <button>Calculate</button>
         </form>
       </div>
@@ -30,11 +44,29 @@
         <h3>Enter three sides of triangle</h3>
         <form>
           <label>a</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <label>b</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <label>c</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <button>Calculate</button>
         </form>
       </div>
@@ -42,12 +74,20 @@
         <h3>Enter side of triangle</h3>
         <form>
           <label>side</label>
-          <input type="number" min="0.0001" step="0.00001" required class="input-number" />
+          <input
+            type="number"
+            min="0.0001"
+            step="0.00001"
+            required
+            class="input-number"
+          />
           <button>Calculate</button>
         </form>
-    </div>
-    <p id="message" style="display: none">Output will be displayed below 👇</p>
-    <div id="output" style="display: none"></div>
+      </div>
+      <p id="message" style="display: none">
+        Output will be displayed below 👇
+      </p>
+      <div id="output" style="display: none"></div>
     </div>
     <script src="./calArea.js"></script>
   </body>

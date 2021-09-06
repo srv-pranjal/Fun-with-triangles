@@ -34,7 +34,7 @@ hr {
   grid-template-columns: auto auto;
   padding: 0;
 }
-a,
+#routers a,
 .triangle-type {
   text-decoration: none;
   margin: 1rem;
@@ -52,7 +52,7 @@ a,
   transition: 0.5s;
   cursor: pointer;
 }
-a:hover,
+#routers a:hover,
 .triangle-type:hover {
   color: #fff;
   background-color: rgb(151, 2, 250);
@@ -158,6 +158,19 @@ p {
   font-size: 0.8rem;
 }
 span {
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+footer {
+  margin-top: 3rem;
+}
+footer i {
+  margin: 0 0.6rem;
+  color: rgba(0, 0, 0, 0.986);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.986);
+  font-weight: 600;
 }

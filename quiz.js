@@ -13,7 +13,6 @@ function getMarks() {
   for (let index = 0; index < correctAnswers.length; index++) {
     if (markedAnswers[index] === correctAnswers[index]) {
       marks += 1;
-      console.log(quizBoxes[index]);
       quizBoxes[index].style.backgroundColor = "#a4ff7a";
     } else quizBoxes[index].style.backgroundColor = "#ff7a7a";
   }

@@ -15,9 +15,21 @@
       <div id="triangle-shape"></div>
       <form id="form">
         <label>base</label>
-        <input type="number" required class="input-sides" />
+        <input
+          type="number"
+          required
+          min="0.0001"
+          step="0.00001"
+          class="input-sides"
+        />
         <label>height</label>
-        <input type="number" required class="input-sides" />
+        <input
+          type="number"
+          required
+          min="0.0001"
+          step="0.00001"
+          class="input-sides"
+        />
         <button>Calculate</button>
       </form>
       <p id="message">Output will be displayed below 👇</p>

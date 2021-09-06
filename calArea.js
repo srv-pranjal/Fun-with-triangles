@@ -8,8 +8,10 @@ const outputMessage = document.querySelector("#output");
 triangleTypes.forEach((triangleType, index) => {
   triangleType.addEventListener("click", () => {
     displayOrHideBox(index);
-    message.innerHTML = "Output will be displayed below 👇";
-    outputMessage.innerHTML = "";
+    message.style.display = "block";
+    outputMessage.style.display = "block";
+    message.innerText = "Output will be displayed below 👇";
+    outputMessage.innerText = "";
   });
 });
 
@@ -51,15 +53,15 @@ function formSubmitHandler(e, index) {
   e.preventDefault();
   let area = 0;
   if (index === 0) {
-    message.innerHTML =
+    message.innerText =
       "Area is calculated using the formula [area = 1/2(base * height)]";
     area = calAreaForRightAngled();
   } else if (index === 1) {
     area = calAreaForScalene();
-    message.innerHTML =
+    message.innerText =
       "Area is calculated using the formula [area = √s(s-a)(s-b)(s-c)]";
     if (!area || area === 0) {
-      message.innerHTML =
+      message.innerText =
         "Enter valid side lengths such that each side length should be less than sum of other two sides";
     }
   } else {
@@ -69,7 +71,7 @@ function formSubmitHandler(e, index) {
   }
   if (area && area !== 0) {
     if (!Number.isInteger(area)) area = area.toFixed(4);
-    outputMessage.innerHTML = area;
+    outputMessage.innerText = area;
   }
 }
 
